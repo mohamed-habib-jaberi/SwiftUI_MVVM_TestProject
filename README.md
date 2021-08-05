@@ -14,6 +14,8 @@ Advantage of MVVM: dependency injection and showing different states of the view
 Advantage of MVVM: easy to include unit testing for SwiftUI projects
 Wrap-up
 
+==>  viewModel : should be a class and we need to comform to ObservableObject to start our Publishing streams or data flow stream and we should use for all properties that we defined there at sign published
+
 📖  Summary blog post about MVVM where you can find all the images from this tutorial here: https://www.swiftyplace.com/blog/swif...
 read more about how to learn SwiftUI in this block post.
 https://karinprater.medium.com/on-the...
