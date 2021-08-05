@@ -63,8 +63,8 @@
 		882F4A2126BBDE320051A01B = {
 			isa = PBXGroup;
 			children = (
-				88FE437826BC363F0005E6F3 /* 2. Publishers Starting Stream.playground */,
 				88FE437526BC36230005E6F3 /* 1. Subscription.playground */,
+				88FE437826BC363F0005E6F3 /* 2. Publishers Starting Stream.playground */,
 				882F4A2C26BBDE320051A01B /* ListTestProject */,
 				882F4A5026BC2FDF0051A01B /* ListTestProjectTests */,
 				882F4A2B26BBDE320051A01B /* Products */,

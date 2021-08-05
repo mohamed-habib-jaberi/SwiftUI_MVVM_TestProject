@@ -11,6 +11,14 @@ import PlaygroundSupport
 
 PlaygroundPage.current.needsIndefiniteExecution = true
 
+let pub: AnyCancellable = Timer.publish(every: 0.5, on: .main, in: .common)
+    .autoconnect()
+    .sink { (completion) in
+        print("data stream completion \(completion)")
+    } receiveValue: { (timestamp) in
+        print("receive value: \(timestamp)")
+    }
+
 
 
 
