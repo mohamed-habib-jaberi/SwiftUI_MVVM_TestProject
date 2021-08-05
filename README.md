@@ -29,3 +29,17 @@ courses!
 👉 @ObservedObject vs. @StateObject https://youtu.be/5ryXee_Ye3k
 👉 @Published vs @State https://youtu.be/ep6WND6j30g
 👉 AppStorage and SceneStorage  https://youtu.be/saofnz959WM
+
+<img width="930" alt="Screenshot 2021-08-05 at 12 32 06" src="https://user-images.githubusercontent.com/36473665/128336058-e364ff2a-0d0d-403b-b4de-40faeea3aba7.png">
+
+<img width="776" alt="Screenshot 2021-08-05 at 11 35 48" src="https://user-images.githubusercontent.com/36473665/128336103-6cc67c71-e623-4257-9faa-bec318fde945.png">
+
+<img width="729" alt="Screenshot 2021-08-05 at 11 40 44" src="https://user-images.githubusercontent.com/36473665/128336145-91463c27-ba37-4bfa-8d82-48f227802a40.png">
+
+<img width="665" alt="Screenshot 2021-08-05 at 11 50 46" src="https://user-images.githubusercontent.com/36473665/128336190-27f7ca75-c2a1-46ab-83e0-ada4043dcd0f.png">
+
+<img width="543" alt="Screenshot 2021-08-05 at 11 54 24" src="https://user-images.githubusercontent.com/36473665/128336220-36999bcc-3e93-4cc8-8631-f50339bab0ca.png">
+
+<img width="477" alt="Screenshot 2021-08-05 at 11 56 45" src="https://user-images.githubusercontent.com/36473665/128336243-92dc4005-787d-4295-81a1-e6ec326d9f12.png">
+
+
