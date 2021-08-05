@@ -9,11 +9,12 @@ import Foundation
 
 class TodoListManager: ObservableObject {
 
-    @Published var items: [ Item]  = [Item(id: UUID(), name: "First"),
-                                      Item(id: UUID(), name: "second"),
-                                      Item(id: UUID(), name: "third") ]
-    init(){
+    @Published var items: [ Item]  = []
+    init(isForTest: Bool = false){
         // get my data set to my items array
+        if isForTest {
+
+        }
     }
 
     func move(indices: IndexSet, newOffset: Int )  {
@@ -28,6 +29,19 @@ class TodoListManager: ObservableObject {
         for index in indexSet {
             items.remove(at: index)
         }
+    }
 
+    static func emptyState() -> TodoListManager {
+        let manager = TodoListManager(isForTest: true)
+        manager.items = []
+        return manager
+    }
+
+    static func fullState() -> TodoListManager {
+        let manager = TodoListManager(isForTest: true)
+        manager.items = [Item(id: UUID(), name: "First"),
+                         Item(id: UUID(), name: "second"),
+                         Item(id: UUID(), name: "third") ]
+        return manager
     }
 }

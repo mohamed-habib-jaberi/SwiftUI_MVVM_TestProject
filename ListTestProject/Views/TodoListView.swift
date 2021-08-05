@@ -16,21 +16,30 @@ struct TodoListView: View {
         
         NavigationView {
             
-            List {
-                ForEach(todoListManager.items){ item in
-                    NavigationLink(
-                        destination:  Text("Destination \(item.name)"),
-                        label: {
-                            Text(item.name)
-                        })
+            ZStack{
+                
+                List {
+                    ForEach(todoListManager.items){ item in
+                        NavigationLink(
+                            destination:  Text("Destination \(item.name)"),
+                            label: {
+                                Text(item.name)
+                            })
+                    }
+                    .onDelete(perform: { indexSet in
+                        todoListManager.deleteItem(at: indexSet)
+                    })
+                    .onMove(perform: { indices, newOffset in
+                        todoListManager.move(indices: indices, newOffset: newOffset)
+                    })
                 }
-                .onDelete(perform: { indexSet in
-                    todoListManager.deleteItem(at: indexSet)
-                })
-                .onMove(perform: { indices, newOffset in
-                    todoListManager.move(indices: indices, newOffset: newOffset)
-                })
+                
+                if todoListManager.items.count == 0{
+                    Text("Please, start by adding items")
+                        .foregroundColor(.gray)
+                }
             }
+            
             
             .navigationBarTitleDisplayMode(.large)
             .navigationBarTitle("Todo's")
@@ -52,8 +61,11 @@ struct TodoListView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TodoListView(todoListManager: TodoListManager())
-            TodoListView(todoListManager: TodoListManager())
+            TodoListView(todoListManager: TodoListManager.emptyState())
+                .previewDisplayName("emptyState")
+            
+            TodoListView(todoListManager: TodoListManager.fullState())
+                .previewDisplayName("full state")
         }
     }
 }
