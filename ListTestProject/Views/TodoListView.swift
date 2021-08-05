@@ -7,24 +7,17 @@
 
 import SwiftUI
 
-struct Item: Identifiable {
-    var id: UUID
-    var name: String
-}
 
-struct ContentView: View {
-
-   @State var items = [Item(id: UUID(), name: "First"),
-Item(id: UUID(), name: "second"),
-Item(id: UUID(), name: "third")
-    ]
-
+struct TodoListView: View {
+    
+    @ObservedObject var todoListManager: TodoListManager
+    
     var body: some View {
-
+        
         NavigationView {
-
+            
             List {
-                ForEach(items){ item in
+                ForEach(todoListManager.items){ item in
                     NavigationLink(
                         destination:  Text("Destination \(item.name)"),
                         label: {
@@ -32,39 +25,35 @@ Item(id: UUID(), name: "third")
                         })
                 }
                 .onDelete(perform: { indexSet in
-                    for index in indexSet {
-                        items.remove(at: index)
-                    }
+                    todoListManager.deleteItem(at: indexSet)
                 })
                 .onMove(perform: { indices, newOffset in
-                    items.move(fromOffsets: indices, toOffset: newOffset)
+                    todoListManager.move(indices: indices, newOffset: newOffset)
                 })
             }
-
+            
             .navigationBarTitleDisplayMode(.large)
             .navigationBarTitle("Todo's")
-
+            
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing){
                     EditButton()
                     Button(action: {
-                        items.append(Item(id: UUID(), name: "newly added"))
+                        todoListManager.addItem()
                     }, label: {
-                            Image(systemName: "plus")
+                        Image(systemName: "plus")
                     })
                 }
             }
         }
-
-
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView()
-            ContentView()
+            TodoListView(todoListManager: TodoListManager())
+            TodoListView(todoListManager: TodoListManager())
         }
     }
 }
