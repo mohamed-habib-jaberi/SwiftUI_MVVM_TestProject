@@ -38,6 +38,8 @@
 		882F4A4F26BC2FDF0051A01B /* ListTestProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListTestProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		882F4A5126BC2FDF0051A01B /* ListTestProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTestProjectTests.swift; sourceTree = "<group>"; };
 		882F4A5326BC2FDF0051A01B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FE437526BC36230005E6F3 /* 1. Subscription.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "1. Subscription.playground"; sourceTree = "<group>"; };
+		88FE437826BC363F0005E6F3 /* 2. Publishers Starting Stream.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "2. Publishers Starting Stream.playground"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,8 @@
 		882F4A2126BBDE320051A01B = {
 			isa = PBXGroup;
 			children = (
+				88FE437826BC363F0005E6F3 /* 2. Publishers Starting Stream.playground */,
+				88FE437526BC36230005E6F3 /* 1. Subscription.playground */,
 				882F4A2C26BBDE320051A01B /* ListTestProject */,
 				882F4A5026BC2FDF0051A01B /* ListTestProjectTests */,
 				882F4A2B26BBDE320051A01B /* Products */,
